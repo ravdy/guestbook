@@ -8,7 +8,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/ravdy/guestbook.git
-    targetRivision: HEAD
+    targetRevision: HEAD
     path: guestbook/guestbook
   destination:
     server: https://kubernetes.default.svc
