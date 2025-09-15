@@ -9,13 +9,10 @@ spec:
   source:
     repoURL: https://github.com/ravdy/guestbook.git
     targetRevision: HEAD
-    path: guestbook/guestbook
+    path: guestbook
   destination:
     server: https://kubernetes.default.svc
     namespace: guestbook-ui
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
