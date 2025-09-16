@@ -1,21 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-ui
+  name: guestbook
   namespace: argocd
-
 spec: 
   project: default
-  source:
+  source: 
     repoURL: https://github.com/ravdy/guestbook.git
-    targetRevision: HEAD
     path: guestbook
-  destination:
+    targetRevision: HEAD
+
+  destination: 
     server: https://kubernetes.default.svc
-    namespace: guestbook-ui
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+    namespace: guestbook
+    
